@@ -1,0 +1,35 @@
+
+<mat-card class="" style="width:50%">
+  <h1 class="mat-display-1">Registration</h1>
+  <div class="alert alert-success" *ngIf="reslt">
+  <strong>{{reslt}}!</strong> .
+  </div>
+  <div class="alert alert-danger" *ngIf="message">
+  <strong>{{message}}!</strong> 
+  </div>
+  <form class="example-container" (ngSubmit)="onSubmitPost(postForm)" #postForm="ngForm">
+  
+  <!-- <mat-form-field>
+  <input matInput name="userName" placeholder="Input username" ngModel required minlength="3" required>
+  </mat-form-field> -->
+  
+  <mat-form-field>
+  <input matInput name="fullName" id="fullName" placeholder="Input FullName" ngModel  minlength="3" >
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+  <input matInput type="email" name="email" id="email" placeholder="Input Email" ngModel required >
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+  <input matInput type="password" name="password" id="password" placeholder="Input Password" ngModel required minlength="5">
+  </mat-form-field>
+  <br>
+  <button type="submit" mat-raised-button color="primary">Submit</button>
+  </form>
+  
+  </mat-card>
+  
+  
+  
+  

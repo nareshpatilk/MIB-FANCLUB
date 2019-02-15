@@ -1,0 +1,61 @@
+<div class="container">
+   
+    
+  <div class="card">
+      <a class="btn btn-lg btn-primary text-uppercase" (click)="back()"> Back </a>
+    <!-- <div class="row" *ngFor="let product of product1."> -->
+        <div class="row" >
+      <aside class="col-sm-5 border-right">
+  <article class="gallery-wrap"> 
+  <div class="img-big-wrap">
+    <div> <a href="#"><img class="product-img" src="{{ product.image }}"></a></div>
+  </div> <!-- slider-product.// -->
+
+  </article> <!-- gallery-wrap .end// -->
+      </aside>
+      <aside class="col-sm-7">
+  <article class="card-body p-5">
+    <!-- <h3 class="title mb-3">{{ productId }}</h3> -->
+  
+  <p class="price-detail-wrap"> 
+    <span class="price h3 text-warning"> 
+      <span class="currency">&#x20b9;</span><span class="num">{{product.price}}</span>
+    </span> 
+
+  </p> <!-- price-detail-wrap .// -->
+  <div class="item-property">
+    <p>Description</p>
+
+    <p>{{product.description}} </p>
+  </div>
+  <hr>
+  
+  <div class="item-property">
+    <p>Available Quantity</p>
+
+    <p>{{product.quantity}} </p>
+  </div>
+  <hr>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="param param-inline">
+          <p>Quantity: </p>
+          <div>
+            <input type="text" name="qty" id="qty" #qty class="form-control form-control-sm" style="width:70px;">
+             <!-- <span>{{ product._id}}</span> -->
+          </div>
+        </div>  <!-- item-property .// -->
+      </div> <!-- col.// -->
+  
+    </div> <!-- row.// -->
+    <hr>
+    <a class="btn btn-lg btn-primary text-uppercase" (click)="goToCart(qty)"> Buy now </a>
+    <a class="btn btn-lg btn-primary text-uppercase add" (click) = "addToCart(qty)">Add to cart </a>
+  </article> <!-- card-body.// -->
+      </aside> <!-- col.// -->
+    </div> <!-- row.// -->
+  </div> <!-- card.// -->
+  
+  
+  </div>
+  <!--container.//-->

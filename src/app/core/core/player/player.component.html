@@ -1,0 +1,15 @@
+<div class="container">
+  
+    <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-3" *ngFor="let player of playersList.players">            
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>{{player.playerName}}</h4>
+                    <p>{{player.playerType}}</p>
+                    <p><a  class="label label-default" [routerLink]="['/login-information/player-details', player._id]">View</a></p>
+                </div>
+                <img src="{{ player.profileImage }}" class="img-responsive" alt="..." style="display:block;width:50%;height:150px ">
+            </div>
+        </div>
+     </div>
+</div>

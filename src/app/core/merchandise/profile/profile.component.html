@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-xs-12 col-snm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <form (ngSubmit) = "onSubmitProfile(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text"  required #nameRef="ngModel"  minlength="4" class="form-control" [(ngModel)]="fullName" id="fullName" name="fullName"  >
+        <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)" class="alert alert-danger">
+          <div [hidden]="!nameRef.errors.required">
+                  Please enter the name
+          </div>
+          <div [hidden]="!nameRef.errors.minlength">
+                  Please enter atleast 4 characters
+          </div>
+      </div>  
+    </div>
+      <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" required #nameRef="ngModel"  minlength="10"  class="form-control" [(ngModel)]="email" id="email" name="email"   readonly>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="number"   class="form-control" [(ngModel)]="phoneNumber" id="phoneNumber" name="phoneNumber" >
+        <!-- <div *ngIf="phoneRef.errors && (phoneRef.dirty || phoneRef.touched)" class="alert alert-danger">
+          <div [hidden]="!phoneRef.errors.required">
+                  Please enter the Phone Number
+          </div>
+          <div [hidden]="!phoneRef.errors.minlength">
+                  Please enter 10 Digits
+          </div>
+      </div>  -->
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <textarea class="form-control" [(ngModel)]="address" id="address" name="address" ></textarea>
+      
+  </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Update</button>&nbsp;
+   
+   
+    </form>
+  </div>
+</div>

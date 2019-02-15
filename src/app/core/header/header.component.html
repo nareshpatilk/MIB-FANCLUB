@@ -1,0 +1,41 @@
+<div class="header-container">
+  <div class="row">
+   <div class="col-md-2">
+    <button class="btn header-container" (click)="goToHome()"><img src="../../../assets/images/logo.png" class="img-dimension"/></button>
+   </div>
+   <div style="float: right; margin-right: 20px;">
+   <div class="col-md-2">
+      <button type="button" class="btn header-container" (click)="openCart()">
+        <i class="fa fa-shopping-cart top-header-icons" aria-hidden="true"></i>
+      </button> 
+    </div>
+    
+   <div class="col-md-offset-5 col-md-2" style = "margin-right: 30px;">
+      <span *ngIf = "emailLoginButton != ''"  ><span style = "font-size:16px;color:#f1ff7a;"> {{  emailLoginButton }} </span></span>
+      
+      <div *ngIf = "!emailLoginButton">
+    <button type="button" class="btn header-container" (click)="openLogin()">
+      <i class="fa fa-sign-in top-header-icons" aria-hidden="true"></i>
+    </button> 
+  </div>
+    <div *ngIf = "emailLoginButton">
+        <button type="button" class="btn header-container" (click)="openLogut()">
+          <i class="fa fa-sign-out fa-2x top-header-icons" aria-hidden="true"></i>
+        </button> 
+      </div>
+    </div>
+ 
+  </div>
+  </div>
+  <div class="row">
+      <ul class="nav nav-tabs">
+          <li role="presentation" (click)="goToHome()" style="margin-left: 12%" class="active header-navs" >Home</li>
+          <li role="presentation" (click)="goTovideos()" class="header-navs">Videos</li>
+          <li role="presentation" (click)="goToStats()" class="header-navs">Players-Stats</li>
+          <li role="presentation" (click)="goToShopping()" class="header-navs">Merchandise</li>
+          <!-- <li role="presentation" (click)="goToChats()" class="header-navs"></li> -->
+
+          <li role="presentation" (click)="goToAboutUS()" class="header-navs">Profile</li>
+        </ul>
+  </div>
+</div>
